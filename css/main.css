@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.mainImages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 815px) {
+  .mainImages {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-rows: repeat(3 1fr);
+    padding: 10px;
+  }
+}
+
+.mainImages .topImageDiv {
+  height: 100%;
+}
+
+@media screen and (max-width: 815px) {
+  .mainImages .topImageDiv {
+    height: 200px;
+  }
+}
+
+.mainImages .topImageDiv img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mainImages .topImageDiv h2 {
+  position: absolute;
+  margin-top: -40px;
+  color: #fff;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+
+.mainImages .topImageDiv:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .mainImages .topImageDiv:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 250px;
+  }
+}
+
+.secondaryStoriesDiv {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 50px;
+  -ms-grid-columns: 70% 1fr;
+      grid-template-columns: 70% 1fr;
+}
+
+.secondaryStoriesDiv .texasMutualDiv {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .secondaryStoriesDiv .texasMutualDiv img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .secondaryStoriesDiv {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .secondaryStoriesDiv .texasMutualDiv img {
+    width: 300px;
+  }
+}
+
+.secondaryStoriesDiv h2 {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.secondaryStoriesDiv .latestStoriesDiv {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.secondaryStoriesDiv .latestStoriesDiv .storyDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
+  border-bottom: 1px solid #302f2f;
+}
+
+@media screen and (max-width: 950px) {
+  .secondaryStoriesDiv .latestStoriesDiv .storyDiv {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #302f2f;
+  }
+}
+
+.secondaryStoriesDiv .latestStoriesDiv .storyDiv img {
+  width: 100%;
+}
+
+.secondaryStoriesDiv .latestStoriesDiv .storyDiv p {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 950px) {
+  .secondaryStoriesDiv .latestStoriesDiv .storyDiv p {
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
